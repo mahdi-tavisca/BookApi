@@ -12,14 +12,9 @@ namespace BookApi.Contracts
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
-
         public string BookId { get; set; } = null!;
-
-        [BsonElement("Name")]
         public string Name { get; set; } = null!;
-
         public string Type { get; set; } = null!;
-
         public string Author { get; set; } = null!;
     }
 }

@@ -52,10 +52,12 @@ namespace BookApi.Controllers
             if (book == null)
             {
                 return NoContent();
-            } else if (genreRange.Contains(book.Type))
+            }
+            else if (genreRange.Contains(book.Type))
             {
                 return Ok(book);
-            } else
+            }
+            else
             {
                 var error = new
                 {
@@ -64,7 +66,7 @@ namespace BookApi.Controllers
 
                 return BadRequest(error);
             }
-            
+
 
 
         }
