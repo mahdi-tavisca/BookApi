@@ -31,6 +31,7 @@ namespace BookApi
                 Configuration.GetSection("BookStoreDatabase"));
 
             services.AddSingleton<BooksService>();
+            services.AddSingleton<LogsService>();
 
             services.AddControllers();
         }
