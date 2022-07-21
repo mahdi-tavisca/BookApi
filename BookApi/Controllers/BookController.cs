@@ -18,10 +18,10 @@ namespace BookApi.Controllers
         private readonly BooksService _booksService;
         private readonly AddBookRequestValidator _addBookRequestValidator;
 
-        public BookController(BooksService booksService)
+        public BookController(BooksService booksService, AddBookRequestValidator addBookRequestValidator)
         {
             _booksService = booksService;
-            _addBookRequestValidator = new AddBookRequestValidator();
+            _addBookRequestValidator = addBookRequestValidator;
         }
 
         [HttpGet]

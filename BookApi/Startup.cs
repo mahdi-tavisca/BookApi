@@ -1,5 +1,6 @@
 using BookApi.Contracts;
 using BookApi.Services;
+using BookApi.Validators;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,7 @@ namespace BookApi
 
             services.AddSingleton<BooksService>();
             services.AddSingleton<LogsService>();
+            services.AddSingleton<AddBookRequestValidator>();
 
             services.AddControllers();
         }
