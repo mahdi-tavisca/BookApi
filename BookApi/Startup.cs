@@ -1,4 +1,5 @@
 using BookApi.Contracts;
+using BookApi.Middleware;
 using BookApi.Services;
 using BookApi.Validators;
 using Microsoft.AspNetCore.Builder;
@@ -51,6 +52,8 @@ namespace BookApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMiddleware<RequestResponseLoggingMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
